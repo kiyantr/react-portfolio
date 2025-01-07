@@ -20,13 +20,14 @@ function App() {
     <div className="App">
       <Container>
         <Row>
-          <Col lg={3} xs={12} style={{paddingRight: 0}}>
-            <Row className="justify-content-md-center">
-              {/* <img src={""} alt="Kiet Tran" className="avt" /> */}
+        <div className="name">TRAN VU KIET</div>
+        <div className="position">FULLSTACK DEVELOPER</div>
+          <Col lg={3} xs={12} style={{ paddingRight: 0 }}>
+            {/* <Row className="justify-content-md-center">
               <div
                 style={{ background: "white", width: 210, height: 115 }}
               ></div>
-            </Row>
+            </Row> */}
             <Row className="justify-content-md-center">
               {/* <Col md={12} xs={{ span: 6, offset: 3 }}> */}
               <Col md={12} xs={12}>
@@ -35,7 +36,9 @@ function App() {
                     <MdEmail />
                   </Col>
                   <Col md={11} xs={11} className="p0">
-                    <a href="mailto:tranvukietk15@gmail.com">tranvukietk15@gmail.com</a>
+                    <a href="mailto:tranvukietk15@gmail.com">
+                      tranvukietk15@gmail.com
+                    </a>
                   </Col>
                 </Row>
                 <Row>
@@ -104,32 +107,30 @@ function App() {
               </Col>
             </Row>
           </Col>
-          <Col lg={9} xs={12} style={{paddingRight: 0, paddingLeft: 20}}>
-            <div className="name">Trần Vũ Kiệt</div>
-            <div className="position">FULLSTACK DEVELOPER</div>
+          <Col lg={9} xs={12} style={{ paddingRight: 0, paddingLeft: 20 }}>
+            
             <div className="summary">
               Highly experienced full-stack developer with over{" "}
               {experienceYear + " "}
               years of experience building and maintaining web applications
-              using .NET Core and NodeJS, over {experienceYear - 1 + " "}
-              years with Typescript. Proven ability to design, develop, and
+              using NodeJS and .NET Core. Proven ability to design, develop, and
               implement high-performance, scalable, and maintainable web
               applications. Expertise in all aspects of the fullstack
               development process, including front-end development, back-end
-              development, and DevOps. Strong understanding of .NET Core,
-              NodeJS, ReactJS, TypeScript, and related web technologies.
+              development, and DevOps. Strong understanding of NodeJS and .NET Core,
+              ReactJS, TypeScript, and related web technologies.
               Experience with RESTful APIs, microservices architecture, and
               cloud platforms such as AWS or Azure. Excellent problem-solving
               and analytical skills. Ability to work independently and as part
               of a team. Strong communication skills and hard working.
+              I am willing to learn new programming languages, looking for long term commitment.
             </div>
-            <div>
+            {/* <div>
               Career path next 5 years: I want to become a technical specialist,
               aiming for a tech lead or solution architect position.
-            </div>
-            <div>
-              Favorite: read book, algorithms, math, AI, crypto currency.
-            </div>
+            </div> */}
+            <div className="summary">Favorites: read books, algorithms, math, AI.</div>
+            <div className="summary">Available for work immediately.</div>
             {/* <div>
               My goals: I am passionate about the crypto currency
 							market and I see the huge potential of Web3. That is
@@ -194,22 +195,23 @@ function App() {
     const leftSkills = [
       {
         type: "Backend",
-        skills: ["C# .NET core, TypeScript NodeJS"],
+        skills: ["TypeScript NodeJS, NestJS, NextJS", "C# .NET core"],
+        // certificate: certificate
       },
       {
         type: "FrontEnd",
-        skills: ["ReactJS, Redux, Bootstrap"],
+        skills: ["ReactJS, Redux, Bootstrap, Tailwindcss"],
       },
       {
         type: "Database",
-        skills: ["MSSQL, MySQL, Postgres, MongoDb, DynamoDb, Redis"],
+        skills: ["MSSQL, MySQL, MongoDb, Redis, Postgres, DynamoDb"],
       },
       {
         type: "Framework",
         skills: [
-          ".NET core version: 3.1, 5, 6, 7, 8",
-		  "NestJS, NextJS v14, NextAuth v4",
+          "NestJS, NextJS v14, NextAuth v4",
           "Express, Fastify",
+          ".NET core version: 3.1, 5, 6, 7, 8",
         ],
       },
     ];
@@ -220,7 +222,7 @@ function App() {
       },
       {
         type: "Message broker",
-        skills: ["SNS - SQS, RabbitMQ, Azure service bus"],
+        skills: ["Azure service bus, SNS - SQS, RabbitMQ"],
       },
       {
         type: "CI/CD",
@@ -249,7 +251,7 @@ function App() {
                 <Col md={12}>{skill}</Col>
               </Row>
             ))}
-            {/* {item.certificate && (
+            {item.certificate && (
               <div className="review-container">
                 <a
                   target="blank"
@@ -264,7 +266,7 @@ function App() {
                   />
                 </a>
               </div>
-            )} */}
+            )}
           </Col>
         </Row>
       ));

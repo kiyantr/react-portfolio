@@ -1,24 +1,26 @@
-import { Fragment } from "react";
-import { Row, Col } from "react-bootstrap";
+import { Fragment } from 'react';
+import { Row, Col } from 'react-bootstrap';
 
 function Projects() {
   const data = [
     {
-      time: "Feb 2024 - Present",
-      name: "CTRWow - CXWow",
-      company: "DFO GPC",
+      time: 'Jun 2023 - Present',
+      name: 'CTRWow - CXWow',
+      company: 'DFOGPC',
       teamSize: 10,
-      position: "Senior backend",
-      detail: `DFO GPC is a Canadian e-commerce company. I worked on two main projects: CTRWow and CxWow.
+      position: 'Senior backend',
+      detail: `DFOGPC is a Canadian e-commerce company. I worked on two main projects: CTRWow and CxWow.
 
 CTRWow: A drag-and-drop website builder that automates static website publishing using FTPS and S3 hosting.
 CxWow: A customer service management platform that integrates AI (ChatGPT) for automatic request assignment, offering a customized solution similar to Atlassian for specific customer needs.`,
       technologies: [
-        `CTRWow: Microservices, Azure function v4 .Net 6 and .Net 8 in-process model, MongoDb, Redis cache, Azure service bus, Azure Event, Azure Blob, API Gateway.`,
         `CXWow: Microservices, Azure function nodejs: Express and Fastify, NextAuth v4 Login, MongoDb, Redis cache, Azure service bus, AI Model ChatGPT model 4, WebSocket, Mailgun, API Gateway.`,
+        `CTRWow: Microservices, Azure function v4 .Net 6 and .Net 8 in-process model, MongoDb, Redis cache, Azure service bus, Azure Event, Azure Blob, API Gateway.`,
       ],
       contributed: [
         `Upgrade azure function v3 to v4.`,
+        `Build OAuth by NextJS v14 and NextAuth v4`,
+        `Nodejs Express, Fastify.`,
         `Upgrade .Net 3.1 and .Net 6 to .Net 8.`,
         `Migrate azure function in-process model to isolated model.`,
         `Create web socket push notification, send emails and chat real-time.`,
@@ -30,50 +32,51 @@ CxWow: A customer service management platform that integrates AI (ChatGPT) for a
         `Discuss with Canadian Project Manager to confirm requirements.`,
       ],
       first: true,
-      className: "border-bottom",
+      className: 'border-bottom',
     },
+    // {
+    //   time: "Jun 2023 - Feb 2024",
+    //   name: "WellBarrier",
+    //   company: "Restaff",
+    //   teamSize: 35,
+    //   position: "Senior fullstack",
+    //   detail: `WELLBARRIER is a web-based project
+    // 	for drawing wells and barriers. It allows
+    // 	users to drag and drop component to create a
+    // 	well and move the elements on the well to
+    // 	match reality. WELLBARRIER, drawings had to be done
+    // 	by hand or scattered across multiple tools.
+    // 	Engineers had to spend a lot of time drawing
+    // 	and were often inaccurate across versions.
+    // 	WELLBARRIER helps engineers save
+    // 	time, improve the accuracy of drawings, and
+    // 	ensure safety with barrier, monitoring, and
+    // 	qualification systems. Most oil wells in the
+    // 	world currently use WELLBARRIER.`,
+    //   technologies: [
+    //     `.Net 6, Multi Tenant.`,
+    //     "Typescript, Nodejs, Javascript, ReactJS, Jest, Redux, d3js.",
+    //     "MSSQL, Store procedure, Redis.",
+    //   ],
+    //   contributed: [
+    //     `Init project Unit Test with xUnit.`,
+    //     `Import user with excel.`,
+    //     `Use d3js draw component and barrier.`,
+    //     `Demo feature with foreign clients (Norway, India, China).`,
+    //     `Refactor appsettings.`,
+    //     `Fix bugs.`,
+    //     `Review code prevent bug early.`,
+    //   ],
+    //   first: true,
+    //   className: "border-bottom",
+    // },
     {
-      time: "Jun 2023 - Feb 2024",
-      name: "WellBarrier",
-      company: "Restaff",
-      teamSize: 35,
-      position: "Senior fullstack",
-      detail: `WELLBARRIER is a web-based project
-			for drawing wells and barriers. It allows
-			users to drag and drop component to create a
-			well and move the elements on the well to
-			match reality. WELLBARRIER, drawings had to be done
-			by hand or scattered across multiple tools.
-			Engineers had to spend a lot of time drawing
-			and were often inaccurate across versions.
-			WELLBARRIER helps engineers save
-			time, improve the accuracy of drawings, and
-			ensure safety with barrier, monitoring, and
-			qualification systems. Most oil wells in the
-			world currently use WELLBARRIER.`,
-      technologies: [
-        `.Net 6, Multi Tenant.`,
-        "Typescript, Nodejs, Javascript, ReactJS, Jest, Redux, d3js.",
-        "MSSQL, Store procedure, Redis.",
-      ],
-      contributed: [
-        `Init project Unit Test with xUnit.`,
-        `Import user with excel.`,
-        `Use d3js draw component and barrier.`,
-        `Demo feature with foreign clients (Norway, India, China).`,
-        `Refactor appsettings.`,
-        `Fix bugs.`,
-        `Review code prevent bug early.`,
-      ],
-      first: true,
-      className: "border-bottom",
-    },
-    {
-      time: "Apr 2022 - Jun 2023",
-      name: "Wallet",
-      company: "Extracy",
+      time: 'Apr 2022 - Apr 2023',
+      name: 'Wallet',
+      company: 'Extracy',
       teamSize: 6,
-      position: "Leader backend",
+      position: 'Leader backend',
+      shutdown: 'The company has ceased operations',
       detail: `Build Duende Identity to provide social login and OAuth2
 			login with hybrid flow. Build microservices with .NET Core and
 			NestJS. Import folders from Trust Wallet and filter and
@@ -106,7 +109,7 @@ CxWow: A customer service management platform that integrates AI (ChatGPT) for a
         `Map DNS domain, config networks.`,
         `Mentor member.`,
       ],
-      className: "project border-bottom",
+      className: 'project border-bottom',
     },
     // {
     // 	time: "Apr 2022 - Feb 2023",
@@ -145,11 +148,11 @@ CxWow: A customer service management platform that integrates AI (ChatGPT) for a
     // 	className: "project border-bottom",
     // },
     {
-      time: "Feb 2022 - Apr 2022",
-      name: "OBL Hub",
-      company: "Extracy",
+      time: 'Feb 2022 - Apr 2022',
+      name: 'OBL Hub',
+      company: 'Extracy',
       teamSize: 12,
-      position: "Leader backend",
+      position: 'Leader backend',
       detail: `The main focus of backend coding is building the structure,
 			coding APIs, and communicating with PM and B
 			A to design
@@ -173,14 +176,14 @@ CxWow: A customer service management platform that integrates AI (ChatGPT) for a
         `Discuss with BA to create tasks and assign to member.`,
         `Mentor member.`,
       ],
-      className: "project border-bottom",
+      className: 'project border-bottom',
     },
     {
-      time: "Dec 2021 - Feb 2022",
-      name: "FVC",
-      company: "Extracy",
+      time: 'Dec 2021 - Feb 2022',
+      name: 'FVC',
+      company: 'Extracy (OneBlock Labs)',
       teamSize: 4,
-      position: "Backend developer",
+      position: 'Backend developer',
       detail: `FVC is a web application for callers and investors. Callers can post their projects, and investors can review and provide capital. FVC's task is to manage the list of potential projects and schedule meetings for the two sides to meet.`,
       technologies: [
         `EF core 2.1, SQL, Store procedure, AWS S3, EC2, OneSignal.`,
@@ -191,7 +194,7 @@ CxWow: A customer service management platform that integrates AI (ChatGPT) for a
         `Implement feature push notification to mobile use OneSignal.`,
         `Fix bug store procedure.`,
       ],
-      className: "project border-bottom",
+      className: 'project border-bottom',
     },
     // {
     // 	time: "Jul 2021 - Dec 2021",
@@ -212,11 +215,11 @@ CxWow: A customer service management platform that integrates AI (ChatGPT) for a
     // 	className: "project border-bottom",
     // },
     {
-      time: "Dec 2019 - Jul 2021",
-      name: "US_Kaplan",
-      company: "Nashtech",
+      time: 'Dec 2019 - Jul 2021',
+      name: 'US_Kaplan',
+      company: 'Nashtech',
       teamSize: 28,
-      position: "Software engineer",
+      position: 'Software engineer',
       detail: `Implement main feature is a Calculation Service to calculate
 			the point for the Leaner, write unit tests for the code, call get
 			data from GraphQL service, ensure that data works
@@ -226,9 +229,9 @@ CxWow: A customer service management platform that integrates AI (ChatGPT) for a
       technologies: [
         `EF core 3.1, Table per hierarchy, SSO, Identity Server 4, OAuth2, GraphQL, microservice.`,
         `Typescript, ReactJS.`,
-        "AWS services, S3, SNS, SQS.",
-        "MySQL, DynamoDb, Redis cache, Memcached.",
-        "design pattern: Singleton, Factory, CQRS, Builder, Mediator",
+        'AWS services, S3, SNS, SQS.',
+        'MySQL, DynamoDb, Redis cache, Memcached.',
+        'design pattern: Singleton, Factory, CQRS, Builder, Mediator',
       ],
       contributed: [
         `Write Unit Test.`,
@@ -237,18 +240,18 @@ CxWow: A customer service management platform that integrates AI (ChatGPT) for a
         `Involve build table table per hierarchy and calculate point.`,
         `Fix bugs.`,
       ],
-      className: "project border-bottom",
+      className: 'project border-bottom',
     },
     {
-      time: "Aug 2018 - Dec 2019",
-      name: "Milano-Coffee - VietCredit - RVezy",
-      company: "Futurify",
+      time: 'Aug 2018 - Dec 2019',
+      name: 'Milano-Coffee - VietCredit - RVezy',
+      company: 'Futurify',
       teamSize: 8,
-      position: "Fullstack developer",
+      position: 'Fullstack developer',
       detail: `Milano-Coffee is Project manage warehouse and sales, order drinks. VietCredit is project create a form for borrowers to register for loans. RVezy is an RV rental platform where you can book unique RV experiences with local motorhome and trailer owners. You can drive, tow, or get your RV delivered and set up practically anywhere across the U.S. and Canada.`,
       technologies: [
         `EF core 2.0, EF core 2.1, SQL, microservice, API gateway.`,
-        "Angular js, Angular 7, SOAP, SQL.",
+        'Angular js, Angular 7, SOAP, SQL.',
         `RabbitMQ, ElasticSearch, Fluent API.`,
       ],
       contributed: [
@@ -294,42 +297,50 @@ CxWow: A customer service management platform that integrates AI (ChatGPT) for a
     <Fragment>
       {data.map((d, index) => (
         <Row key={`project_${d.name}_${index}`}>
-          <Col lg={3} xs={12} className={d["first"] ? "" : "project-intro"}>
+          <Col lg={3} xs={12} className={d['first'] ? '' : 'project-intro'}>
             <Row>
               {/* <Col md={5}>Time</Col> */}
-              <Col xs={12} className="bold td-under">
+              <Col xs={12} className='bold td-under'>
                 {d.time}
               </Col>
             </Row>
 
+            {d.shutdown && (
+              <Row>
+                <Col xs={12} className='pr-0'>
+                  <b>({d.shutdown})</b>
+                </Col>
+              </Row>
+            )}
+
             <Row>
-              <Col xs={4} className="pr-0">
+              <Col xs={4} className='pr-0'>
                 Company
               </Col>
-              <Col xs={8} className="bold">
+              <Col xs={8} className='bold'>
                 {d.company}
               </Col>
             </Row>
 
             <Row>
-              <Col xs={12} className="pr-0">
+              <Col xs={4} className='pr-0'>
                 Project
               </Col>
-              <Col xs={12} className="bold">
+              <Col xs={8} className='bold'>
                 {d.name}
               </Col>
             </Row>
 
             <Row>
-              <Col xs={4} className="pr-0">
+              <Col xs={4} className='pr-0'>
                 Position
               </Col>
-              <Col xs={8} className="bold">
+              <Col xs={8} className='bold'>
                 {d.position}
               </Col>
             </Row>
             <Row>
-              <Col xs={4} className="pr-0">
+              <Col xs={4} className='pr-0'>
                 Members
               </Col>
               <Col xs={8}>{d.teamSize}</Col>
@@ -337,9 +348,9 @@ CxWow: A customer service management platform that integrates AI (ChatGPT) for a
           </Col>
           <Col lg={9} xs={12} className={d.className}>
             <Row>
-              <div className="bold">DESCRIPTION</div>
-              <div className="summary">{d.detail}</div>
-              <div className="details bold">TECHNOLOGIES</div>
+              <div className='bold'>DESCRIPTION</div>
+              <div className='summary'>{d.detail}</div>
+              <div className='details bold'>TECHNOLOGIES</div>
               <div>
                 <ul>
                   {d.technologies.map((technology, index) => (
@@ -347,7 +358,7 @@ CxWow: A customer service management platform that integrates AI (ChatGPT) for a
                   ))}
                 </ul>
               </div>
-              <div className="details bold">CONTRIBUTED</div>
+              <div className='details bold'>CONTRIBUTED</div>
               <div>
                 <ul>
                   {d.contributed.map((contribute, index) => (
