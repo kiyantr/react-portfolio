@@ -7,6 +7,7 @@ function Projects() {
       time: 'Jun 2023 - Present',
       name: 'CTRWow - CXWow',
       company: 'DFOGPC',
+      shutdown: 'Scale down',
       teamSize: 10,
       position: 'Senior backend',
       detail: `DFOGPC is a Canadian e-commerce company. I worked on two main projects: CTRWow and CxWow.
