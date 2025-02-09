@@ -7,6 +7,7 @@ function Projects() {
       time: 'Jun 2023 - Present',
       name: 'CTRWow - CXWow',
       company: 'DFOGPC',
+      shutdown: 'Scale down',
       teamSize: 10,
       position: 'Senior backend',
       detail: `DFOGPC is a Canadian e-commerce company. I worked on two main projects: CTRWow and CxWow.
@@ -162,7 +163,7 @@ CxWow: A customer service management platform that integrates AI (ChatGPT) for a
 			team members, build core ReactJS, create docker and
 			deploy web to VPS centos 7, setup nginx and jenkins.`,
       technologies: [
-        `Typescript, .Net 6, SQL, ReactJS, S3, Onion Architeture, Docker, nginx, jenkins.`,
+        `Typescript, .Net 6, SQL, ReactJS, S3, Onion Architeture, Docker, nginx, jenkins, XUnit.`,
       ],
       contributed: [
         `Init project and apply clean architecture.`,
@@ -234,7 +235,7 @@ CxWow: A customer service management platform that integrates AI (ChatGPT) for a
         'design pattern: Singleton, Factory, CQRS, Builder, Mediator',
       ],
       contributed: [
-        `Write Unit Test.`,
+        `Write Unit Test with NUnit.`,
         `Implement task.`,
         `Implement new API with GraphQL.`,
         `Involve build table table per hierarchy and calculate point.`,

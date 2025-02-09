@@ -6,7 +6,7 @@ import linkedin from './assets/images/linkedin.png';
 import address from './assets/images/home-address.png';
 import CardPullEffect from './components/CardScrollEffect';
 import Navbar from './components/Navbar';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card } from 'flowbite-react';
 import { MdEmail, MdMail } from 'react-icons/md';
 import { FaBirthdayCake, FaPhoneAlt } from 'react-icons/fa';
@@ -14,7 +14,34 @@ import MindmapGraph from './components/Graph';
 
 function App() {
   const dateWork = Date.parse('2018-08-20');
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem('darkMode');
+    return savedMode ? JSON.parse(savedMode) : true;
+  });
+
+  const [text, setText] = useState('');
+  const fullText = "Hii there, I'm KIET 🧑‍💻";
+  const words = fullText.split(' ');
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      setText((prev) => {
+        if(index > fullText.length - 1) {
+          return prev;
+        }
+        return prev + fullText[index]
+      });
+      index++;
+      if (index === fullText.length) clearInterval(interval);
+    },100);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('darkMode', JSON.stringify(darkMode));
+  }, [darkMode]);
+
   const experienceYear = Math.floor(
     (Date.now() - dateWork) / (1000 * 60 * 60 * 24 * 365)
   );
@@ -40,18 +67,18 @@ function App() {
               </div>
               <div className='col-span p-8 sm:col-span-2 grid-rows-2'>
                 <h1 className='text-3xl font-bold'>
-                  Hi there, I'm{' '}
-                  <span className='bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent'>
-                    KIET
-                  </span>{' '}
-                  🧑‍💻
+                  {text.split(' ').map((word, index) => (
+                    <span key={index} className={word === 'KIET' ? 'bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent' : ''}>
+                      {word}{' '}
+                    </span>
+                  ))}
                 </h1>
                 <p className='mt-6 text-xl leading-9'>
-                  I'm a full-stack developer with over 6 years experience build
+                  I'm a fullstack developer with over {experienceYear} years experience build
                   web application.
                 </p>
                 <div className='mt-3 flex gap-2 p-2'>
-                  <a href="mailto:tranvukietk15@gmail.com" title="tranvukietk15@gmail.com">
+                  <a href="mailto:kiettranv@gmail.com" title="kiettranv@gmail.com">
                     <img
                       className='h-12 w-12 hover:translate-y-1'
                       src={gmail}

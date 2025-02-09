@@ -23,7 +23,7 @@ const techColor: any = {
   'API Gateway':
     'bg-purple-500 text-white',
   'Azure Function':
-    'text-white bg-blue-500 hover:bg-[#2557D6]/90 focus:ring-4',
+    'text-white bg-[#2557D6] hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-nonedark:focus:ring-[#2557D6]/50',
   'AZ Service Bus':
     'text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80',
   Web3: 'text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400',
@@ -42,9 +42,9 @@ const projects = [
     projectName: 'CXwow',
     mainTechnicals: [
       'Node.js',
-      'Azure Function',
-      'API Gateway',
       'MongoDB',
+      'API Gateway',
+      'Azure Function',
       'AZ Service Bus',
     ],
     description:
@@ -55,11 +55,10 @@ const projects = [
   {
     projectName: 'CTRwow',
     mainTechnicals: [
-      'Node.js',
-      'Azure Function',
       '.NET Core',
       'MongoDB',
       'API Gateway',
+      'Azure Function',
       'AZ Service Bus',
     ],
     description:
@@ -69,7 +68,7 @@ const projects = [
   },
   {
     projectName: 'Wallet',
-    mainTechnicals: ['Node.js','.NET Core',  'ReactJS', 'Docker', 'Web3'],
+    mainTechnicals: ['.NET Core', 'Node.js', 'ReactJS', 'Docker', 'Web3'],
     description:
       'Web3 platform, get coins data on onchain, store and provide information to mobile app, SSO.',
     position: 'Leader Backend',
@@ -109,7 +108,7 @@ const CardPullEffect: React.FC = () => {
     { id: 3, title: 'Card 3', description: 'This is the third card.' },
     { id: 4, title: 'Card 4', description: 'This is the fourth card.' },
     { id: 5, title: 'Card 5', description: 'This is the fifth card.' },
-    // { id: 6, title: 'Card 6', description: 'This is the fifth card.' },
+    { id: 6, title: 'Card 6', description: 'This is the fifth card.' },
   ];
 
   const cardHeight = 400; // Height of each card
@@ -165,16 +164,16 @@ const CardPullEffect: React.FC = () => {
           return (
             <div
               key={index}
-              className='w-full flex items-center justify-center'
+              className='absolute w-full flex items-center justify-center'
               style={{
                 height: `${cardHeight}px`,
-                // top: `${start}px`,
-                // opacity,
-                // transform: `translateY(${translateY + 0.5}px)`,
-                // transition: 'opacity 0.2s ease-out, transform 0.2s ease-out',
+                top: `${start}px`,
+                opacity,
+                transform: `translateY(${translateY + 0.5}px)`,
+                transition: 'opacity 0.2s ease-out, transform 0.2s ease-out',
               }}
             >
-              <div className='h-[300px] w-[90%] max-w-[800px] min-w-[425px] dark:bg-slate-800 shadow-xl rounded-lg p-6 flex flex-col items-center justify-center border border-gray-200'>
+              <div className='h-[300px] w-[90%] max-w-[800px] min-w-[425px] dark:bg-slate-800 shadow-xl rounded-lg p-6 flex flex-col items-center justify-center'>
                 <div className='p-4'>
                   <div className='flex flex-col items-center gap-y-2 md:flex-row'>
                     {/* <a
